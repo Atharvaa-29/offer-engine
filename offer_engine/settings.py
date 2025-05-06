@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'offers',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -75,10 +77,16 @@ WSGI_APPLICATION = 'offer_engine.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'offer_db',
+        'USER': 'offer_user',
+        'PASSWORD': 'atharva29',  # Use the new password here
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
+
+
 
 
 # Password validation
